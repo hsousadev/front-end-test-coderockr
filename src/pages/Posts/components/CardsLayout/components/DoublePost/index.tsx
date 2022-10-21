@@ -32,62 +32,68 @@ const DoublePost = ({
   const newSecondArticle = secondPost?.article.replace(/(<([^>]+)>)/gi, "");
 
   return (
-    <Container>
-      <div className="post">
-        {!mirror ? (
-          <>
-            <img src={firstPost?.imageUrl} alt="" />
-            <div className="content">
-              <div>
-                <p>{firstPost?.author}</p>
-                <h1>{shortenText(firstPost?.title, titleLengthLimit)}</h1>
-                <p>{shortenText(newFirstArticle, articleLengthLimit)}</p>
-              </div>
-              <img src={readMore} alt="" />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="content">
-              <div>
-                <p>{firstPost?.author}</p>
-                <h1>{shortenText(firstPost?.title, titleLengthLimit)}</h1>
-                <p>
+    <Container isMirror={mirror}>
+      {firstPost && (
+        <div className="post">
+          {!mirror ? (
+            <>
+              <img src={firstPost?.imageUrl} className="cover" alt="" />
+              <div className="content">
+                <div>
+                  <p>{firstPost?.author}</p>
+                  <h1>{shortenText(firstPost?.title, titleLengthLimit)}</h1>
                   <p>{shortenText(newFirstArticle, articleLengthLimit)}</p>
-                </p>
+                </div>
+                <img src={readMore} alt="" />
               </div>
-              <img src={readMore} alt="" />
-            </div>
-            <img src={firstPost?.imageUrl} alt="" />
-          </>
-        )}
-      </div>
-      <div className="post">
-        {!mirror ? (
+            </>
+          ) : (
+            <>
+              <div className="content">
+                <div>
+                  <p>{firstPost?.author}</p>
+                  <h1>{shortenText(firstPost?.title, titleLengthLimit)}</h1>
+                  <p>
+                    <p>{shortenText(newFirstArticle, articleLengthLimit)}</p>
+                  </p>
+                </div>
+                <img src={readMore} alt="" />
+              </div>
+              <img src={firstPost?.imageUrl} className="cover" alt="" />
+            </>
+          )}
+        </div>
+      )}
+      <div className="post" id="reverse">
+        {secondPost && (
           <>
-            <img src={secondPost?.imageUrl} alt="" />
-            <div className="content">
-              <div>
-                <p>{secondPost?.author}</p>
-                <h1>{shortenText(secondPost?.title, titleLengthLimit)}</h1>
-                <p>
-                  <p>{shortenText(newSecondArticle, articleLengthLimit)}</p>
-                </p>
-              </div>
-              <img src={readMore} alt="" />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="content">
-              <div>
-                <p>{secondPost?.author}</p>
-                <h1>{shortenText(secondPost?.title, titleLengthLimit)}</h1>
-                <p>{shortenText(newSecondArticle, articleLengthLimit)}</p>
-              </div>
-              <img src={readMore} alt="" />
-            </div>
-            <img src={secondPost?.imageUrl} alt="" />
+            {!mirror ? (
+              <>
+                <img src={secondPost?.imageUrl} className="cover" alt="" />
+                <div className="content">
+                  <div>
+                    <p>{secondPost?.author}</p>
+                    <h1>{shortenText(secondPost?.title, titleLengthLimit)}</h1>
+                    <p>
+                      <p>{shortenText(newSecondArticle, articleLengthLimit)}</p>
+                    </p>
+                  </div>
+                  <img src={readMore} alt="" />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="content">
+                  <div>
+                    <p>{secondPost?.author}</p>
+                    <h1>{shortenText(secondPost?.title, titleLengthLimit)}</h1>
+                    <p>{shortenText(newSecondArticle, articleLengthLimit)}</p>
+                  </div>
+                  <img src={readMore} alt="" />
+                </div>
+                <img src={secondPost?.imageUrl} className="cover" alt="" />
+              </>
+            )}
           </>
         )}
       </div>

@@ -15,10 +15,8 @@ interface CardsLayoutProps {
 }
 
 const CardsLayout = ({ postsList }: CardsLayoutProps) => {
-  console.log("postsList", postsList);
-
-  const articleLengthLimit = 120;
-  const titleLengthLimit = 40;
+  const articleLengthLimit = 100;
+  const titleLengthLimit = 30;
 
   return (
     <Container>
@@ -29,19 +27,19 @@ const CardsLayout = ({ postsList }: CardsLayoutProps) => {
         titleLengthLimit={titleLengthLimit}
       />
       <SinglePost
-        post={postsList[3]}
+        post={postsList[2]}
         titleLengthLimit={titleLengthLimit}
         articleLengthLimit={articleLengthLimit}
       />
       <DoublePost
-        firstPost={postsList[4]}
-        secondPost={postsList[5]}
+        firstPost={postsList[3]}
+        secondPost={postsList[4]}
         articleLengthLimit={articleLengthLimit}
         titleLengthLimit={titleLengthLimit}
         mirror
       />
       <SinglePost
-        post={postsList[6]}
+        post={postsList[5]}
         titleLengthLimit={titleLengthLimit}
         articleLengthLimit={articleLengthLimit}
         mirror

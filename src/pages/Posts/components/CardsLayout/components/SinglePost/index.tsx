@@ -24,19 +24,23 @@ const SinglePost = ({
   const newArticle = post?.article.replace(/(<([^>]+)>)/gi, "");
 
   return (
-    <Container mirror={mirror}>
-      <div className="content">
-        <img src={post?.imageUrl} alt="" />
-        <div className="sub-content">
-          <div>
-            <p>{post?.author}</p>
-            <h1>{shortenText(post?.title, titleLengthLimit)}</h1>
-            <p>{shortenText(newArticle, articleLengthLimit)}</p>
+    <>
+      {post && (
+        <Container mirror={mirror}>
+          <div className="content">
+            <img src={post?.imageUrl} alt="" className="cover" />
+            <div className="sub-content">
+              <div>
+                <p>{post?.author}</p>
+                <h1>{shortenText(post?.title, titleLengthLimit)}</h1>
+                <p>{shortenText(newArticle, articleLengthLimit)}</p>
+              </div>
+              <img src={readMore} alt="" />
+            </div>
           </div>
-          <img src={readMore} alt="" />
-        </div>
-      </div>
-    </Container>
+        </Container>
+      )}
+    </>
   );
 };
 

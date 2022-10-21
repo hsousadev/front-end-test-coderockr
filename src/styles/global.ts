@@ -11,8 +11,8 @@ export const Container = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
   background: linear-gradient(90deg, var(--YELLOW) 0%, var(--DARK-YELLOW) 100%);
+  min-height: 100vh;
 
   a {
     text-decoration: none;
@@ -46,9 +46,24 @@ export const Container = styled.div`
     margin: 0;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1830px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 1556px) {
     h1 {
       font-size: 1.75rem;
+      line-height: 2rem;
     }
 
     h2 {
@@ -57,6 +72,7 @@ export const Container = styled.div`
 
     p {
       font-size: 1rem;
+      line-height: 1.5rem;
     }
   }
 
