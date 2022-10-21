@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Contact from "./pages/Contact";
-import PostPage from "./pages/PostPage";
-import PostsList from "./pages/PostsList";
+import SinglePost from "./pages/SinglePost";
+import Posts from "./pages/Posts";
 import TopBar from "./shared/components/TopBar";
 
 import { Container } from "./styles/global";
@@ -13,8 +13,8 @@ function App() {
       <Router>
         <TopBar />
         <Routes>
-          <Route path="/" element={<PostsList />} />
-          <Route path="/post" element={<PostPage />} />
+          <Route path="/" element={<Posts />} />
+          <Route path="/SinglePost" element={<SinglePost />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
