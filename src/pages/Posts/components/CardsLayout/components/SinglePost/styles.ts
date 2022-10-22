@@ -35,7 +35,7 @@ export const Container = styled.div<ContainerProps>`
     align-items: flex-end;
     justify-content: center;
 
-    width: 66.66%;
+    width: 66%;
     height: 40rem;
 
     background-color: white;

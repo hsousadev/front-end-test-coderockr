@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 6.25rem;
 
   .infinite-scroll-component {
     display: flex;

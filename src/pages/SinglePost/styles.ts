@@ -5,6 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 66%;
+  margin-top: 12.5rem;
 
   @media (max-width: 768px) {
     width: 90%;

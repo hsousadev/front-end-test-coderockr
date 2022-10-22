@@ -1,8 +1,13 @@
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
+import { Context } from "../../../App";
 
 import { Container } from "./styles";
 
 const TopBar = () => {
+  const { setContactModal } = useContext(Context);
+
   return (
     <Container>
       <div className="content">
@@ -12,9 +17,7 @@ const TopBar = () => {
           <Link to="/">
             <h2>Posts</h2>
           </Link>
-          <Link to="/contact">
-            <h2>Contact</h2>
-          </Link>
+          <h2 onClick={() => setContactModal(true)}>Contact</h2>
         </div>
       </div>
     </Container>

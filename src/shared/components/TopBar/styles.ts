@@ -4,19 +4,26 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: -webkit-fill-available; */
   background-color: var(--DARK);
 
   padding: 1.75rem;
   width: 100%;
+  position: fixed;
 
   .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 100%;
-    max-width: 80rem;
+    width: 66%;
+
+    a {
+      transition: all 0.3s ease-in-out;
+      :hover {
+        transition: all 0.3s ease-in-out;
+        opacity: 50%;
+      }
+    }
 
     h1 {
       color: var(--WHITE);
@@ -30,8 +37,15 @@ export const Container = styled.div`
       width: 100%;
 
       h2 {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
         text-decoration: none;
         color: var(--WHITE);
+
+        :hover {
+          transition: all 0.3s ease-in-out;
+          opacity: 50%;
+        }
       }
     }
   }
