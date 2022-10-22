@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { Context } from "../../../App";
@@ -6,7 +6,7 @@ import { Context } from "../../../App";
 import { Container } from "./styles";
 
 const TopBar = () => {
-  const { setContactModal } = useContext(Context);
+  const { setHasContactModal } = useContext(Context);
 
   return (
     <Container>
@@ -17,7 +17,7 @@ const TopBar = () => {
           <Link to="/">
             <h2>Posts</h2>
           </Link>
-          <h2 onClick={() => setContactModal(true)}>Contact</h2>
+          <h2 onClick={() => setHasContactModal(true)}>Contact</h2>
         </div>
       </div>
     </Container>

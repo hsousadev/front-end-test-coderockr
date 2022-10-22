@@ -9,28 +9,27 @@ import TopBar from "./shared/components/TopBar";
 import { Container } from "./styles/global";
 
 interface GlobalContext {
-  contactModal: boolean;
-  setContactModal: React.Dispatch<React.SetStateAction<boolean>>;
+  hasContactModal: boolean;
+  setHasContactModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const Context = createContext<GlobalContext>({
-  contactModal: false,
-  setContactModal: () => {},
+  hasContactModal: false,
+  setHasContactModal: () => {},
 });
 
 function App() {
-  const [contactModal, setContactModal] = useState(false);
+  const [hasContactModal, setHasContactModal] = useState(false);
   useEffect(() => {
-    console.log("contactModal", contactModal);
-  }, [contactModal]);
+    console.log("hasContactModal", hasContactModal);
+  }, [hasContactModal]);
 
   return (
-    <Context.Provider value={{ contactModal, setContactModal }}>
+    <Context.Provider value={{ hasContactModal, setHasContactModal }}>
       <Container>
-        <ContactModal />
-        <TopBar />
-
         <Router>
+          <TopBar />
+          {hasContactModal && <ContactModal />}
           <Routes>
             <Route path="/" element={<Posts />} />
             <Route path="/post/:id" element={<SinglePost />} />

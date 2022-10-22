@@ -13,7 +13,11 @@ export const Container = styled.div`
   width: 100%;
   background: linear-gradient(90deg, var(--YELLOW) 0%, var(--DARK-YELLOW) 100%);
   min-height: 100vh;
-  overflow: hidden;
+
+  button {
+    appearance: none;
+    outline: none;
+  }
 
   a {
     text-decoration: none;
@@ -54,6 +58,30 @@ export const Container = styled.div`
     line-height: 2.125rem;
     color: var(--DARK);
     margin: 0;
+  }
+
+  label {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    color: var(--DARK);
+    margin: 0;
+  }
+
+  textarea {
+    width: 35rem;
+    height: 12rem;
+    resize: none;
+    margin-top: 0.5rem;
+
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.51);
+    padding: 1rem 1rem 0.5rem 1rem;
   }
 
   @media (max-width: 1830px) {
