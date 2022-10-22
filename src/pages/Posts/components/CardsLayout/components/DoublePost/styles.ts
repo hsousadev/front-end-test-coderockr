@@ -37,10 +37,22 @@ export const Container = styled.div<ContainerProps>`
     width: 100%;
     height: -webkit-fill-available;
 
+    :hover {
+      img {
+        transition: all 0.6s ease-in-out;
+        width: 25%;
+      }
+    }
+
     img {
+      transition: all 0.6s ease-in-out;
       height: 100%;
-      width: 20rem;
       object-fit: cover;
+      width: 20rem;
+
+      @supports (-moz-appearance: none) {
+        height: 20rem;
+      }
     }
 
     .content {

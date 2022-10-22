@@ -9,6 +9,8 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
+  transition: all 0.6s ease-in-out;
+
   width: 100%;
   max-width: 1920px;
   margin-top: 4.375rem;
@@ -28,6 +30,7 @@ export const Container = styled.div<ContainerProps>`
         `}
 
   .content {
+    transition: all 0.6s ease-in-out;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -38,7 +41,17 @@ export const Container = styled.div<ContainerProps>`
     background-color: white;
 
     > img {
+      transition: all 0.6s ease-in-out;
+      object-fit: cover;
+      height: 100%;
       width: 40rem;
+    }
+
+    :hover {
+      > img {
+        transition: all 0.6s ease-in-out;
+        width: 40%;
+      }
     }
 
     .sub-content {
@@ -103,8 +116,6 @@ export const Container = styled.div<ContainerProps>`
   }
 
   @media (max-width: 540px) {
-    /* margin-top: 2rem; */
-
     .content {
       img.cover {
         width: 30%;

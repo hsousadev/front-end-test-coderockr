@@ -4,10 +4,11 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
   background-color: var(--DARK);
 
   padding: 1.75rem;
+  width: 100%;
 
   .content {
     display: flex;

@@ -13,6 +13,7 @@ export const Container = styled.div`
   width: 100%;
   background: linear-gradient(90deg, var(--YELLOW) 0%, var(--DARK-YELLOW) 100%);
   min-height: 100vh;
+  overflow: hidden;
 
   a {
     text-decoration: none;
@@ -36,6 +37,15 @@ export const Container = styled.div`
     margin: 0;
   }
 
+  h3 {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 26px;
+    margin: 0;
+  }
+
   p {
     font-family: "Rubik";
     font-style: normal;
@@ -53,6 +63,10 @@ export const Container = styled.div`
 
     h2 {
       font-size: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1rem;
     }
 
     p {
@@ -85,7 +99,8 @@ export const Container = styled.div`
       font-size: 1.125rem;
     }
 
-    p {
+    p,
+    h3 {
       font-size: 0.75rem;
     }
   }

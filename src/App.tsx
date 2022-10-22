@@ -14,7 +14,7 @@ function App() {
         <TopBar />
         <Routes>
           <Route path="/" element={<Posts />} />
-          <Route path="/SinglePost" element={<SinglePost />} />
+          <Route path="/post/:id" element={<SinglePost />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
