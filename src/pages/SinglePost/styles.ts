@@ -12,6 +12,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 500px) {
+    margin-top: 5rem;
     width: 100%;
   }
 `;

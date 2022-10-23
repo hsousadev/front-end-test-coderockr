@@ -76,6 +76,7 @@ export const Container = styled.div`
 
   @media (max-width: 1280px) {
     margin-top: 2rem;
+    margin-bottom: 2rem;
 
     .hero {
       align-items: center;
@@ -116,10 +117,6 @@ export const Container = styled.div`
 
     .hero .post-info .content h3 {
       margin-bottom: 0.5rem;
-    }
-
-    .hero img {
-      height: 20rem;
     }
 
     .article p {

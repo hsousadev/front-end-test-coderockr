@@ -77,6 +77,7 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        width: max-content;
       }
 
       button.send {
