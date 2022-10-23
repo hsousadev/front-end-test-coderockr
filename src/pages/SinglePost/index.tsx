@@ -15,7 +15,6 @@ interface SinglePostProps {
 
 const SinglePost = () => {
   const params = useParams();
-
   const [post, setPost] = useState<SinglePostProps>();
 
   useEffect(() => {

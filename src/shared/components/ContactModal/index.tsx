@@ -70,6 +70,14 @@ const Contact = () => {
       .replaceAll(" ", "")
       .replace(/[^a-zA-Z0-9 ]/g, "");
 
+    console.log(formatedPhone);
+
+    if (formatedPhone.length < 13) {
+      setPhoneWarning(true);
+      setPhoneIsEmpty(true);
+      return;
+    }
+
     if (formatedPhone != "") {
       const re = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
       const phoneTest = re.test(String(formatedPhone).toLowerCase());
@@ -170,7 +178,9 @@ const Contact = () => {
             </div>
           </form>
 
-          {alertToComplete && <strong>⚠️ All fields are required.</strong>}
+          {alertToComplete && (
+            <strong>⚠️ Some field is empty or with an invalid value.</strong>
+          )}
           {okMessage && (
             <strong>
               <img className="loading" src={loading} alt="" /> ✅ All fields
