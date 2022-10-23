@@ -36,7 +36,6 @@ const Posts = () => {
       `https://stormy-shelf-93141.herokuapp.com/articles/?_page=${pageNumber}&_limit=6`
     ).then((res) => {
       const newPosts = res?.data;
-      console.log("newPosts", newPosts);
       setIsLoading(false);
 
       if (newPosts.length > 0) {

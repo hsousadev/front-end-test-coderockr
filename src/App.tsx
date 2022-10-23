@@ -20,9 +20,6 @@ export const Context = createContext<GlobalContext>({
 
 function App() {
   const [hasContactModal, setHasContactModal] = useState(false);
-  useEffect(() => {
-    console.log("hasContactModal", hasContactModal);
-  }, [hasContactModal]);
 
   return (
     <Context.Provider value={{ hasContactModal, setHasContactModal }}>

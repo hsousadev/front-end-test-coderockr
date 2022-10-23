@@ -48,7 +48,6 @@ export const Container = styled.div`
         border: none;
         padding: 0 7rem 4.5rem 7rem;
 
-        height: 56.875rem;
         gap: 3rem;
 
         h1 {
@@ -61,10 +60,30 @@ export const Container = styled.div`
         .field {
           display: flex;
           flex-direction: column;
+
+          .react-tel-input .flag-dropdown {
+            display: none;
+          }
         }
       }
 
+      img.loading {
+        width: 2rem;
+      }
+
+      strong {
+        color: var(--YELLOW);
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
       button.send {
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -79,6 +98,20 @@ export const Container = styled.div`
         p {
           font-weight: 500;
           color: var(--WHITE);
+        }
+
+        :hover {
+          transition: all 0.5s ease-in-out;
+          background: var(--YELLOW);
+        }
+      }
+
+      #send-disabled {
+        opacity: 50%;
+        cursor: not-allowed;
+        :hover {
+          transition: all 0.5s ease-in-out;
+          background: var(--DARK);
         }
       }
     }
