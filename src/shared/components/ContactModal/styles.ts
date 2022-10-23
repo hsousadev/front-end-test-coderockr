@@ -10,7 +10,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow-y: scroll;
 
   .content {
@@ -112,6 +111,65 @@ export const Container = styled.div`
         :hover {
           transition: all 0.5s ease-in-out;
           background: var(--DARK);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    overflow-y: hidden;
+    zoom: 75%;
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      margin: 0;
+      gap: 0;
+
+      width: 100%;
+      height: 100%;
+
+      overflow: hidden;
+
+      .box {
+        margin-bottom: 2rem;
+        width: 90%;
+
+        .close-button button.close {
+          margin: 0;
+        }
+
+        form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          gap: 1rem;
+          padding: 0;
+          width: 90%;
+
+          .field {
+            width: 100%;
+
+            label {
+              width: 50%;
+            }
+
+            input,
+            textarea {
+              width: 95%;
+            }
+          }
+        }
+
+        button.send {
+          margin-top: 4rem;
+          p {
+            font-size: 1.25rem;
+          }
         }
       }
     }

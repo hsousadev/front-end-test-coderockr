@@ -47,10 +47,12 @@ export const Container = styled.div<ContainerProps>`
       width: 40rem;
     }
 
-    :hover {
-      > img {
-        transition: all 0.6s ease-in-out;
-        width: 40%;
+    @media (min-width: 1280px) {
+      :hover {
+        > img {
+          transition: all 0.6s ease-in-out;
+          width: 40%;
+        }
       }
     }
 
