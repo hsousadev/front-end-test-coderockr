@@ -70,8 +70,6 @@ const Contact = () => {
       .replaceAll(" ", "")
       .replace(/[^a-zA-Z0-9 ]/g, "");
 
-    console.log(formatedPhone);
-
     if (formatedPhone.length < 13) {
       setPhoneWarning(true);
       setPhoneIsEmpty(true);
